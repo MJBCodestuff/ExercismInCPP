@@ -6,7 +6,7 @@
 
 namespace protein_translation {
 
-std::vector<std::string> proteins(std::string rna);
+std::vector<std::string> proteins(const std::string &rna);
 
 inline std::map<std::string, std::string> protein_lookup {
         {"AUG", "Methionine"},

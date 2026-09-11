@@ -11,6 +11,7 @@ class clock {
     public:
     static clock at(int hour, int minutes);
     [[nodiscard]] clock plus(int additional_minutes) const;
+    [[nodiscard]] clock minus(int removed_minutes) const;
     bool operator== (clock c) const;
     bool operator!= (clock c) const;
     operator std::string() const;

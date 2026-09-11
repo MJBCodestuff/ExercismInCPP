@@ -48,6 +48,10 @@ clock clock::plus(int additional_minutes) const {
 
 }
 
+clock clock::minus(int removed_minutes) const {
+    return plus(removed_minutes * -1);
+}
+
 bool clock::operator==(clock c) const {
     return this->hour == c.hour && this->minutes == c.minutes;
 }
