@@ -1,6 +1,7 @@
 #include "atbash_cipher.h"
 #include <vector>
 
+
 namespace atbash_cipher {
 
 
@@ -10,7 +11,7 @@ std::string encode(std::string input) {
     int blank_counter {0};
 
     for (int i = 0; i < static_cast<int>(input.length()); ++i) {
-        if (isnumber(input.at(i)))
+        if (isdigit(input.at(i)))
             result_vector.emplace_back(input.at(i));
 
         if (isalpha(input.at(i)))
@@ -32,7 +33,7 @@ std::string encode(std::string input) {
 std::string decode(std::string input) {
     std::vector<char> result_vector {};
     for (int i = 0; i < static_cast<int>(input.length()); ++i) {
-        if (isnumber(input.at(i)))
+        if (isdigit(input.at(i)))
             result_vector.emplace_back(input.at(i));
         if (isalpha(input.at(i)))
             result_vector.emplace_back(switchLetter(tolower(input.at(i))));
