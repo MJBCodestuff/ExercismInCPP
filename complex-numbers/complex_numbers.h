@@ -4,7 +4,6 @@
 namespace complex_numbers {
 
 
-    static double constant_e {std::__math::exp(1)};
 
 class Complex {
 
