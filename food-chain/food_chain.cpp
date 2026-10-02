@@ -3,6 +3,7 @@
 #include <map>
 #include <numeric>
 #include <vector>
+#include <array>
 
 namespace food_chain {
     std::array<std::string, 8> creatures{{"fly", "spider", "bird", "cat", "dog", "goat", "cow", "horse"}};
