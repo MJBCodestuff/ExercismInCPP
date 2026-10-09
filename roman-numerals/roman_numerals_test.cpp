@@ -6,6 +6,7 @@
 #endif
 
 TEST_CASE("1_is_i") { REQUIRE("I" == roman_numerals::convert(1)); }
+#define EXERCISM_RUN_ALL_TESTS
 #if defined(EXERCISM_RUN_ALL_TESTS)
 TEST_CASE("2_is_ii") { REQUIRE("II" == roman_numerals::convert(2)); }
 TEST_CASE("3_is_iii") { REQUIRE("III" == roman_numerals::convert(3)); }
