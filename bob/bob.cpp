@@ -1,6 +1,7 @@
 #include "bob.h"
 #include <cctype>
 #include <algorithm>
+#include <stdexcept>
 
 namespace bob {
     std::string trim(std::string_view input) {
@@ -25,7 +26,13 @@ std::string hey(std::string input) {
     std::any_of(input.begin(), input.end(), [](char c) {
         return std::isalpha(c);
     });
-    const bool question = input.back() == '?';
+        bool question {};
+        try {
+            question = input.at(input.length() - 1) == '?';
+        }catch (std::out_of_range& e) {
+            question = false;
+        }
+
     if (question and !is_all_caps)
         return "Sure.";
     if (!question and is_all_caps)
